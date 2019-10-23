@@ -1,8 +1,10 @@
 import React, {Component} from "react"
-import { View, Image, Text, StyleSheet, FlatList} from "react-native"
+import { View, Image, Text, StyleSheet, FlatList, TextInput} from "react-native"
 import UserIdBox from './userIdBox/UserIdBox'
 import feedsData from './feedsData'
 import IconBar from "./iconBar/IconBar"
+import FeedsComment from "./feedsComment/FeedsComment"
+import FeedsCommentWriting from "./feedsCommentWriting/FeedsCommentWriting"
 
 const styles = StyleSheet.create({
     container: {
@@ -22,13 +24,6 @@ const styles = StyleSheet.create({
     },
     userContainer: {
         flexDirection: 'row'
-    },
-    commentContainer: {
-        flexDirection: 'row',
-        marginLeft: 10
-    },
-    otherUserId : {
-        fontWeight: 'bold'
     }
 })
 
@@ -60,21 +55,12 @@ class Feeds extends Component {
                                 <Text style={styles.likeCount}>{item.userId}</Text>
                                 <Text style={styles.userComment}>{item.userComment}</Text>
                             </View>
-                            <View>
-                                <FlatList
-                                    data={item.comment}
-                                    renderItem={({item}) =>
-                                    <View style={styles.commentContainer}>
-                                        <Text style={styles.otherUserId}>{item.userId}</Text>
-                                        <Text> {item.userComment}</Text>
-                                    </View>
-                                        }
-                                    keyExtractor={item => item.id}
-                                />
-                            </View>
+                            <FeedsComment data={item.comment}/>
+                            <FeedsCommentWriting />
                         </View>}
                     keyExtractor = {item => item.id}
                 />
+
             </View>
         )
     }

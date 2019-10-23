@@ -1,15 +1,17 @@
 import React from 'react';
 import Nav from './src/components/nav/Nav'
 import Feeds from './src/components/feeds/Feeds'
-import { StyleSheet, View} from 'react-native';
+import { StyleSheet, View, ScrollView} from 'react-native';
 import StoryBox from './src/components/storyBox/StoryBox';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Nav />
-      <StoryBox />
-      <Feeds />
+      <ScrollView>
+        <StoryBox />
+        <Feeds />
+      </ScrollView>
     </View>
   );
 }
