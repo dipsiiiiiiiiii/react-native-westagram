@@ -2,16 +2,20 @@ import React from "react"
 import { Text, Image, StyleSheet, View} from "react-native"
 
 const styles = StyleSheet.create({
+    container: {
+        margin: 15,
+        marginRight : 10
+    },
     img : {
-        width: 55,
-        height: 55,
-        borderRadius: 55/2
+        width: 50,
+        height: 50,
+        borderRadius: 25,
     }
 })
 
 const UserStory = (props) => {
     return(
-        <View>
+        <View style={styles.container}>
             <Image source={{uri: props.uri}} style={styles.img} />
             <Text>{props.userId}</Text>
         </View>

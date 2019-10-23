@@ -5,11 +5,13 @@ import storyData from './storyData'
 
 const styles = {
     container : {
-        height: 80,
-        backgroundColor: 'red',
+        height: 90,
+        backgroundColor: 'white',
         width: "100%",
-        marginTop: 75,
-        flexDirection: 'row'
+        marginTop: 80,
+        flexDirection: 'row',
+        borderBottomWidth: 1,
+        borderBottomColor: '#e6e6e6'
     }
 }
 
@@ -26,6 +28,7 @@ class StoryBox extends Component {
         return(
             <View style={styles.container}>
                 <FlatList
+                    style={styles.flatList}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
                     data={this.state.data}

@@ -8,9 +8,10 @@ const styles = StyleSheet.create({
         top: 0,
         right: 0,
         left: 0,
-        height: 75,
+        height: 80,
         borderBottomWidth: 1,
-        borderBottomColor: '#e6e6e6'
+        borderBottomColor: '#e6e6e6',
+        zIndex: 1
     },
     navTop : {
         width: '100%',
@@ -28,12 +29,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     cameraImg : {
-        height: 40,
-        width: 40,
+        height: 35,
+        width: 35,
+        marginTop: 5,
+        marginLeft: 5,
+        marginRight: 5
     },
     logoImg : {
-        height: 40,
-        width: 120
+        height: 30,
+        width: 100,
+        marginTop: 8
+
     },
     navRight: {
         flexDirection: 'row'
@@ -44,7 +50,8 @@ const styles = StyleSheet.create({
     },
     dmImg : {
         height: 40,
-        width: 40
+        width: 40,
+        marginTop: 3
     }
 })
 

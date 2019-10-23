@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './src/components/nav/Nav'
-import { StyleSheet, Text, View, Image } from 'react-native';
+import Feeds from './src/components/feeds/Feeds'
+import { StyleSheet, View} from 'react-native';
 import StoryBox from './src/components/storyBox/StoryBox';
 
 export default function App() {
@@ -8,8 +9,7 @@ export default function App() {
     <View style={styles.container}>
       <Nav />
       <StoryBox />
-      <Image source={pic} style={styles.image}/>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Feeds />
     </View>
   );
 }
