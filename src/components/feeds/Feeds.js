@@ -1,19 +1,15 @@
 import React, {Component} from "react"
-import { View, Image, Text, StyleSheet, FlatList, TextInput} from "react-native"
+import { View, Image, Text, StyleSheet, FlatList} from "react-native"
 import UserIdBox from './userIdBox/UserIdBox'
 import feedsData from './feedsData'
 import CommentBox from './commentBox/CommentBox'
 import IconBar from "./iconBar/IconBar"
-import FeedsComment from "./commentBox/feedsComment/FeedsComment"
-import FeedsCommentWriting from "./commentBox/feedsCommentWriting/FeedsCommentWriting"
-
 
 class Feeds extends Component {
     constructor(){
         super()
         this.state={
-            data: feedsData,
-            opacity: 0.3
+            data: feedsData
         }
     }
                         
@@ -44,7 +40,6 @@ class Feeds extends Component {
                         </View>}
                     keyExtractor = {item => item.id}
                     />
-
             </View>
         )
     }

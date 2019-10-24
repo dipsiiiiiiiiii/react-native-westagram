@@ -30,6 +30,21 @@ const styles = {
 
 
 class FeedsCommentWriting extends Component{
+    constructor(){
+        super();
+        this.state={
+            opacity: 0.3
+        }
+    }
+
+    handleColor = (e) => {
+        console.log(e)
+        let opacity = (this.props.value ? 1 : 0.3)
+            this.setState({
+                opacity
+        })
+    }
+
     render(){
         return(
         <View 
@@ -44,12 +59,13 @@ class FeedsCommentWriting extends Component{
                 placeholder="댓글 달기..."
                 onChangeText={this.props.onChangeText}
                 value={this.props.value}
+                onChange={this.handleColor}
             />
             <TouchableOpacity 
                 style={styles.button}
                 onPress={this.props.onPress}>   
                 <Text
-                    style={{opacity: this.props.opacity,
+                    style={{opacity: this.state.opacity,
                     color: '#3897f0'}}
                     >게시
                 </Text>
