@@ -13,7 +13,7 @@ const feedsData = [{
             id: 'e',
             userId: 'hheehee',
             userComment: 'Wonderful!'
-        }]
+        },]
     },{   
         id: 'b',
         userId: 'hisseulgi',
